@@ -41,6 +41,11 @@ The following environment variables are supported:
    The release version to build images against. Valid values are jessie, stretch
    buster, bullseye, and testing.
 
+ * `TARGET_ARCH` (Default: armhf)
+
+   The target architecture of the built images. Valid values are armhf (for
+   32-bit builds) or arm64 (for 64-bit builds).
+
  * `APT_PROXY` (Default: unset)
 
    If you require the use of an apt proxy, set it here.  This proxy setting
