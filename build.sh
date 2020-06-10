@@ -163,6 +163,7 @@ export DEPLOY_ZIP="${DEPLOY_ZIP:-1}"
 export LOG_FILE="${WORK_DIR}/build.log"
 
 export TARGET_HOSTNAME=${TARGET_HOSTNAME:-raspberrypi}
+export TARGET_ARCH=${TARGET_ARCH:-armhf}
 
 export FIRST_USER_NAME=${FIRST_USER_NAME:-pi}
 export FIRST_USER_PASS=${FIRST_USER_PASS:-raspberry}
