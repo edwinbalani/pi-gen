@@ -173,6 +173,17 @@ export WPA_PASSWORD
 export WPA_COUNTRY
 export ENABLE_SSH="${ENABLE_SSH:-0}"
 
+if [ "${TARGET_ARCH}" = "arm64" ]; then
+    case "${RELEASE}" in
+        buster|bullseye)
+            ;;
+        *)
+            echo "Only buster and bullseye are curretly supported for arm64 builds" 1>&2
+            exit 1
+            ;;
+    esac
+fi
+
 export LOCALE_DEFAULT="${LOCALE_DEFAULT:-en_GB.UTF-8}"
 
 export KEYBOARD_KEYMAP="${KEYBOARD_KEYMAP:-gb}"
